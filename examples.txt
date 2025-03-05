@@ -1,0 +1,4 @@
+python geoloc_util.py "Los Angeles, CA" "60601" "New York, NY"
+python geoloc_util.py "Madison, WI" "98039"
+python geoloc_util.py "Portland, OR"
+python geoloc_util.py "33101"
