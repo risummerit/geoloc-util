@@ -1,0 +1,23 @@
+# Ignoring compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignoring logs and temp files
+*.log
+*.tmp
+.DS_Store
+
+# Ignoring test reports
+htmlcov/
+.coverage
+.cache/
+junit.xml
+*.pytest_cache/
+.allure/
+
+
+# Ignoring Git metadata
+*.swp
+*.swo
