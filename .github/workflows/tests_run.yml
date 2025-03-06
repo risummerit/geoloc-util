@@ -11,6 +11,7 @@ on:
         description: 'Tests run with marker'
         required: true
         default: 'geoloc_util'
+        type: choice
         options:
           - smoke
           - geoloc_util
