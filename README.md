@@ -59,7 +59,7 @@ Run the command followed by location names or ZIP codes. Example:
 
 ---
 
-## Running tests
+## Running tests locally
 
 In this project the tests are written using Pytest framework. Framework documentation: [PyTest documentation](https://docs.pytest.org)
 
@@ -73,3 +73,21 @@ Run only functional tests:
 `pytest -vs <\relative path to the file with tests that you would like to run>` <br/>
 
 All tests saved in **test-suite** folder
+
+---
+
+## Running tests with GitHub Actions
+
+Go to GHA page with tests run workflow:
+[![Running tests with GitHub Actions](https://github.com/risummerit/geoloc-util/actions/workflows/tests_run.yml/badge.svg)](https://github.com/risummerit/geoloc-util/actions/workflows/tests_run.yml)
+
+Click button "Run workflow" to trigger the tests run. By default 'geoloc_util" marker is selected, it select all tests for OpenWeather Geolocation Utility.<br/>
+
+![image](https://github.com/user-attachments/assets/49421d34-1ccf-42af-a01b-edbcd513bf8b)
+Renew the page to see the new workflow running.
+
+---
+### Tests reports
+
+Open [allure report](https://risummerit.github.io/geoloc-util/allure-report/) for most recent test run.<br/>
+! Make sure to clear browser cache to see new report after each new tests run.
