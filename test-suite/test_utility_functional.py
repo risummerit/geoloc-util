@@ -7,6 +7,7 @@ from data_for_tests import *
 """Testing the health of URLs."""
 @pytest.mark.smoke
 @pytest.mark.functional
+@pytest.mark.geoloc_util
 @pytest.mark.parametrize("url", 
                         [
                             BASE_URL,
@@ -28,6 +29,7 @@ def test_smoke_urls_healthy(url):
 
 """Testing the `getInfoByLocations` function with different location test data."""
 @pytest.mark.functional
+@pytest.mark.geoloc_util
 @pytest.mark.parametrize("locationTest", [cityAndStateTestData, cityAndStateTestData2])
 def test_get_info_by_location(locationTest):
 
@@ -59,6 +61,7 @@ def test_get_info_by_location(locationTest):
 
 """Testing the `getInfoByZip` function using parameterized zip code test data."""
 @pytest.mark.functional
+@pytest.mark.geoloc_util
 @pytest.mark.parametrize("zipCodeTest", [zipTestData, zipTestData2])
 def test_get_info_by_zip(zipCodeTest):
 
@@ -87,6 +90,7 @@ def test_get_info_by_zip(zipCodeTest):
 
 """Verifying that API requests without a token return a 401 status code."""
 @pytest.mark.functional
+@pytest.mark.geoloc_util
 @pytest.mark.functional_negative
 @pytest.mark.parametrize("api_function, input_value", [
     (getInfoByLocations, "Los Angeles,CA"),
@@ -100,6 +104,7 @@ def test_negative_no_token(api_function, input_value):
 
 """Verifying that API requests with invalid token return a 401 status code."""
 @pytest.mark.functional
+@pytest.mark.geoloc_util
 @pytest.mark.functional_negative
 @pytest.mark.parametrize("api_function, input_value", [
     (getInfoByLocations, "Los Angeles,CA"),
@@ -113,6 +118,7 @@ def test_negative_invalid_token(api_function, input_value):
 
 """Verifying that API requests with iinvalid data in requests return a 404 status code."""
 @pytest.mark.functional
+@pytest.mark.geoloc_util
 @pytest.mark.functional_negative
 @pytest.mark.parametrize("api_function, input_value", [
     (getInfoByLocations, "Los Angeles,CA"),

@@ -3,6 +3,7 @@ import pytest
 
 
 """Ensure CLI runs without errors and returns valid JSON output."""
+@pytest.mark.geoloc_util
 @pytest.mark.e2e
 @pytest.mark.smoke
 @pytest.mark.parametrize("cli_args", [
@@ -25,6 +26,7 @@ def test_smoke_cli_runs_successfully(cli_args):
 
 
 """Running the 'geoloc_util' utility using CLI and checking if expected output appears."""
+@pytest.mark.geoloc_util
 @pytest.mark.e2e
 @pytest.mark.parametrize("cli_args, expected_output", [
     (["Los Angeles,CA"], "Los Angeles"),
