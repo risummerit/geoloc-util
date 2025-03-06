@@ -11,6 +11,14 @@ on:
         description: 'Tests run with marker'
         required: true
         default: 'geoloc_util'
+        options:
+          - smoke
+          - geoloc_util
+          - e2e
+          - functional
+          - functional_negative
+
+run-name: Running tests with marker '${{ github.event.inputs.marker }}'
 
 jobs:
   test:
